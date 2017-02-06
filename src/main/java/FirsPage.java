@@ -45,7 +45,8 @@ public class FirsPage {
         createButton = new JButton("Create Party");
         createButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+            CreateParty createParty = new CreateParty();
+            createParty.start();
             }
         });
 
