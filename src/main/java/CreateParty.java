@@ -30,7 +30,7 @@ public class CreateParty {
 
     public void start(){
         frame = new JFrame("Create Party");
-        frame.setDefaultCloseOperation(frame.HIDE_ON_CLOSE);
+        frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
         frame.setBounds(50, 50, 300, 500);
         frame.setLayout(new GridBagLayout());
 
@@ -82,7 +82,9 @@ public class CreateParty {
                 int qMan = qManSlider.getValue();
                 int qDay = qDaySlider.getValue();
                 InteractWithDB inWDB = new InteractWithDB();
-                inWDB.addParty(nameParty, qMan, qDay);
+                inWDB.addPartyInfoToDB(nameParty, qMan, qDay);
+                InitMan initMan = new InitMan();
+                initMan.start(nameParty, qMan, qDay);
                 frame.setVisible(false);
             }
         });
@@ -105,6 +107,7 @@ public class CreateParty {
         frame.pack();
 
     }
+
 
 
 

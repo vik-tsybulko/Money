@@ -72,7 +72,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="$PROJECT_DIR$/src/main/resources/as.sqlite" schema="main" />
+            <file path="$PROJECT_DIR$/src/main/resources/KSU.sqlite" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-password value="false" />

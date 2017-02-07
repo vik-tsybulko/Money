@@ -25,7 +25,8 @@ public class FirsPage {
     private JList jList;
     private JButton createButton;
     private JButton selectButton;
-    private DefaultListModel defaultListModel = new DefaultListModel();
+    public DefaultListModel defaultListModel = new DefaultListModel();
+    private Box listBox = Box.createHorizontalBox();
 
     public void start(){
         Box labelBox = Box.createHorizontalBox();
@@ -34,7 +35,6 @@ public class FirsPage {
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setBounds(50, 50, 250, 300);
 
-        Box listBox = Box.createHorizontalBox();
         whichOpenStartPage();
         jList = new JList(defaultListModel);
         scrollPane = new JScrollPane(jList);
@@ -78,6 +78,9 @@ public class FirsPage {
                 defaultListModel.addElement(f.getName().replaceAll(".sqlite", ""));
             }
         }else defaultListModel.addElement("No Party");
+    }
+    public void rePaint(){
+        listBox.repaint();
     }
 
 
