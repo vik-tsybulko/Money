@@ -78,7 +78,12 @@ public class CreateParty {
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                String nameParty = namePartyTextField.getText();
+                int qMan = qManSlider.getValue();
+                int qDay = qDaySlider.getValue();
+                InteractWithDB inWDB = new InteractWithDB();
+                inWDB.addParty(nameParty, qMan, qDay);
+                frame.setVisible(false);
             }
         });
         cancelButton = new JButton("Cancel");
@@ -100,6 +105,7 @@ public class CreateParty {
         frame.pack();
 
     }
+
 
 
 

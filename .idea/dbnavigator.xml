@@ -31,7 +31,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="7bc1aacd-3914-473c-b463-aa1675ab2611">
-      <console name="Connection" type="STANDARD" />
+      <console name="Connection" type="STANDARD"><![CDATA[select * from QUANTITY]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
@@ -72,7 +72,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="$PROJECT_DIR$/src/main/resources/1.sqlite" schema="main" />
+            <file path="$PROJECT_DIR$/src/main/resources/as.sqlite" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-password value="false" />
