@@ -26,17 +26,19 @@ public class FirsPage {
     private JButton createButton;
     private JButton selectButton;
     public DefaultListModel defaultListModel = new DefaultListModel();
-    private Box listBox = Box.createHorizontalBox();
 
     public void start(){
+        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jFrame.setBounds(50, 50, 250, 300);
         Box labelBox = Box.createHorizontalBox();
         jLabel = new JLabel("Your Party");
         labelBox.add(jLabel);
-        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        jFrame.setBounds(50, 50, 250, 300);
 
+        //listBox вінесен за пределі метода для доступа к нему в другом методе для перерисовки
         whichOpenStartPage();
+        Box listBox = Box.createHorizontalBox();
         jList = new JList(defaultListModel);
+        jList.setSelectedIndex(0);
         scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(100, 200));
         listBox.add(scrollPane);
@@ -53,7 +55,8 @@ public class FirsPage {
         selectButton = new JButton("Select");
         selectButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                PartyInfo partyInfo = new PartyInfo();
+                partyInfo.start();
             }
         });
         buttonBox.add(createButton);
@@ -80,7 +83,12 @@ public class FirsPage {
         }else defaultListModel.addElement("No Party");
     }
     public void rePaint(){
-        listBox.repaint();
+        jFrame.repaint();
+    }
+    public String getSelectParty(){
+        return String.valueOf(jList.getSelectedValue());
+
+
     }
 
 

@@ -24,14 +24,14 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="7bc1aacd-3914-473c-b463-aa1675ab2611">
+      <connection connection-id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
         <schema name="main" object-types="column, constraint, index, table, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="7bc1aacd-3914-473c-b463-aa1675ab2611">
-      <console name="Connection" type="STANDARD"><![CDATA[select * from QUANTITY]]></console>
+    <connection id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
+      <console name="Connection" type="STANDARD"><![CDATA[select QDAY from QUANTITY;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
@@ -57,7 +57,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="7bc1aacd-3914-473c-b463-aa1675ab2611" active="true">
+      <connection id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
