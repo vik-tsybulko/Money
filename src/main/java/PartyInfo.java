@@ -19,6 +19,7 @@ public class PartyInfo {
     private JPanel buttonPanel;
     private JButton addMoneyButton;
     private JButton cancelButton;
+    private String nameParty;
 
     public void start(){
         frame = new JFrame("Party Info");
@@ -27,7 +28,7 @@ public class PartyInfo {
         frame.setBounds(50, 50, 250, 300);
 
 
-        String nameParty = FirsPage.getInstance().getSelectParty();
+        nameParty = FirsPage.getInstance().getSelectParty();
         MyTableModel tableModel = new MyTableModel();
         tableModel.initDB(nameParty);
 
@@ -39,14 +40,15 @@ public class PartyInfo {
         addMoneyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                AddMoney addMoney = new AddMoney();
+                addMoney.start(nameParty);
             }
         });
         cancelButton = new JButton("Cancel");
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                frame.setVisible(false);
             }
         });
         buttonPanel = new JPanel();
@@ -57,8 +59,8 @@ public class PartyInfo {
 
         frame.setVisible(true);
         frame.pack();
-
     }
+
     private class MyTableModel extends AbstractTableModel{
         Connection connection = null;
         Statement statement = null;
@@ -92,9 +94,20 @@ public class PartyInfo {
 
             } catch (SQLException e) {
                 e.printStackTrace();
+            }finally {
+                    try {
+                        if (statement != null) {
+                            resultSet.close();
+                            statement.close();
+                            connection.close();
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
             }
-
         }
+
+
 
         @Override
         public int getRowCount() {
