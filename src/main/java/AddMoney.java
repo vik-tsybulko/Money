@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Solush on 08.02.2017.
@@ -22,14 +24,18 @@ public class AddMoney {
     private JComboBox suplierComboBox = new JComboBox();
     private JLabel amountLabel;
     private JTextField amountTextField;
-    private JPanel ButtonPanel;
+    private JLabel payForLabel;
+    private JTextField payForTextField;
+    private JPanel buttonPanel;
     private JButton okButton;
     private JButton cancelButton;
     private String nameParty;
 
-
     public AddMoney(){
 
+    }
+    public JFrame getFrame(){
+        return frame;
     }
     public void start(String nameParty){
         this.nameParty = nameParty;
@@ -66,6 +72,43 @@ public class AddMoney {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));
         frame.add(suplierComboBox, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.9,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(15, 15, 15, 15), 0, 0));
+        amountLabel = new JLabel("Amount:");
+        frame.add(amountLabel, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.9,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(15, 15, 15, 15), 0, 0));
+        amountTextField = new JTextField(4);
+        frame.add(amountTextField, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.9,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(15, 15, 15, 15), 0, 0));
+        payForLabel = new JLabel("Pay for:");
+        frame.add(payForLabel, new GridBagConstraints(0, 5, 1, 1, 0.0, 0.9,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(15, 15, 15, 15), 0, 0));
+        payForTextField = new JTextField(15);
+        frame.add(payForTextField, new GridBagConstraints(1, 5, 1, 1, 0.0, 0.9,
+                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
+                new Insets(15, 15, 15, 15), 0, 0));
+        buttonPanel = new JPanel(new GridLayout());
+        okButton = new JButton("OK");
+        okButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        buttonPanel.add(okButton);
+        buttonPanel.add(Box.createHorizontalStrut(15));
+        buttonPanel.add(cancelButton);
+        frame.add(buttonPanel, new GridBagConstraints(0, 6, 2, 1, 0.0, 0.9,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));
 
@@ -128,6 +171,7 @@ public class AddMoney {
             frame.setBounds(50, 50, 200, 300);
             int qridy = 0;
             int qridx = 0;
+            HashMap<String, Boolean> isParticipant = new HashMap<String, Boolean>();
             for (int i = 0; i < userCheckBox.length; i++){
                     if (3 == qridx){
                         qridx = 0;
@@ -142,6 +186,7 @@ public class AddMoney {
             okButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+
 
                 }
             });
@@ -161,6 +206,9 @@ public class AddMoney {
                     new Insets(15, 15, 15, 15), 0, 0));
             frame.setVisible(true);
             frame.pack();
+        }
+        private void selectNameInAddMoney(){
+
         }
     }
 

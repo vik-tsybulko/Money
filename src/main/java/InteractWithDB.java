@@ -50,7 +50,7 @@ public class InteractWithDB {
                     + "ID INTEGER NOT NULL PRIMARY KEY, "
                     + "USERNAME TEXT NOT NULL";
             for (int i = 1; i <= qDay; i++){
-                queryCreateTable += ", DAY" + i + " INTEGER NOT NULL";
+                queryCreateTable += ", DAY" + i + " INTEGER NOT NULL DEFAULT 0";
             }
             queryCreateTable += ")";
             statement.execute(queryCreateTable);
@@ -58,11 +58,9 @@ public class InteractWithDB {
             for (int i = 0; i < nameMan.length; i++){
                 String s = nameMan[i];
                 String insertUserTableSQL = "INSERT INTO USER "
-                        + "VALUES (" + (i + 1) + ", " + "'" + s + "'";
-                for (int i1 = 0; i1 < qDay; i1++){
-                    insertUserTableSQL += ", 0";
-                }
-                insertUserTableSQL += ")";
+                        + "(ID, USERNAME)"
+                        + "VALUES (" + (i + 1) + ", " + "'" + s + "'"
+                        + ")";
                 statement.execute(insertUserTableSQL);
             }
 

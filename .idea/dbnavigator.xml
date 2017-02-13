@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="UTF-8" />
+      <charset value="windows-1251" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -31,7 +31,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
-      <console name="Connection" type="STANDARD"><![CDATA[select QDAY from QUANTITY;]]></console>
+      <console name="Connection" type="STANDARD"><![CDATA[update USER set DAY1 = 3 where USERNAME = 'VIK';
+update USER set DAY2 = 5 where USERNAME = 'TOL';
+select * from USER ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
