@@ -13,32 +13,50 @@ import java.util.Map;
  * Created by Solush on 08.02.2017.
  */
 public class AddMoney {
-    private JFrame frame;
+    private static JFrame frame;
     private JLabel dayLabel;
-    private JComboBox dayComboBox = new JComboBox();
+
+    public static JComboBox getDayComboBox() {
+        return dayComboBox;
+    }
+
+    public static JComboBox getSuplierComboBox() {
+        return suplierComboBox;
+    }
+
+    public static JTextField getAmountTextField() {
+        return amountTextField;
+    }
+
+    public static JTextField getPayForTextField() {
+        return payForTextField;
+    }
+
+    private static JComboBox dayComboBox = new JComboBox();
     private JLabel userLabel;
     private JButton userButton;
-    private JCheckBox[] userCheckBox;
+    private static JCheckBox[] userCheckBox;
     private String[] nameMan;
     private JLabel suplierLabel;
-    private JComboBox suplierComboBox = new JComboBox();
+    private static JComboBox suplierComboBox = new JComboBox();
     private JLabel amountLabel;
-    private JTextField amountTextField;
+    private static JTextField amountTextField;
     private JLabel payForLabel;
-    private JTextField payForTextField;
+    private static JTextField payForTextField;
     private JPanel buttonPanel;
     private JButton okButton;
     private JButton cancelButton;
     private String nameParty;
 
-    public AddMoney(){
+    public static JCheckBox[] getUserCheckBox(){
+        return userCheckBox;
+    }
 
-    }
-    public JFrame getFrame(){
-        return frame;
-    }
-    public void start(String nameParty){
+    public AddMoney(String nameParty){
         this.nameParty = nameParty;
+    }
+
+    public void start(){
         frame = new JFrame("Add Money");
         frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
         frame.setLayout(new GridBagLayout());
@@ -95,14 +113,19 @@ public class AddMoney {
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Logic logic = new Logic();
+                logic.addPay();
+                TableModel tableModel = new TableModel();
+                tableModel.initDB(nameParty);
+                TablePanel.repaintPanel();
+                frame.setVisible(false);
             }
         });
         cancelButton = new JButton("Cancel");
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                frame.setVisible(false);
             }
         });
         buttonPanel.add(okButton);
@@ -125,6 +148,7 @@ public class AddMoney {
             connection = conjdbc.getConnection();
             statement = connection.createStatement();
             resultSet = statement.executeQuery("SELECT QDAY FROM QUANTITY");
+            dayComboBox.removeAllItems();
             int qDay = resultSet.getInt(1);
             for (int i = 1; i <= qDay; i++){
                 String s = "Day " + i;
@@ -136,6 +160,7 @@ public class AddMoney {
             nameMan = new String[columnCount];
             userCheckBox = new JCheckBox[columnCount];
             int i = 0;
+            suplierComboBox.removeAllItems();
             while (resultSet.next()){
                     nameMan[i] = resultSet.getString(1);
                     suplierComboBox.addItem(nameMan[i]);
@@ -156,60 +181,4 @@ public class AddMoney {
             }
         }
     }
-    private class SelectPeople{
-        private JFrame frame;
-        private JButton okButton;
-        private JButton cancelButton;
-
-        public SelectPeople(){
-
-        }
-        public void start(){
-            frame = new JFrame("Select people");
-            frame.setLayout(new GridBagLayout());
-            frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
-            frame.setBounds(50, 50, 200, 300);
-            int qridy = 0;
-            int qridx = 0;
-            HashMap<String, Boolean> isParticipant = new HashMap<String, Boolean>();
-            for (int i = 0; i < userCheckBox.length; i++){
-                    if (3 == qridx){
-                        qridx = 0;
-                        qridy++;
-                    }
-                    frame.add(userCheckBox[i], new GridBagConstraints(qridx, qridy, 1, 1, 0.0, 0.9,
-                            GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                            new Insets(15, 15, 15, 15), 0, 0));
-                    qridx++;
-            }
-            okButton = new JButton("OK");
-            okButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-
-
-                }
-            });
-            cancelButton = new JButton("Cancel");
-            cancelButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    frame.setVisible(false);
-                }
-            });
-            frame.add(okButton, new GridBagConstraints(0, qridy + 1, 1, 1, 0.0, 0.9,
-                    GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                    new Insets(15, 15, 15, 15), 0, 0));
-            frame.add(Box.createHorizontalStrut(15));
-            frame.add(cancelButton, new GridBagConstraints(1, qridy + 1, 1, 1, 0.0, 0.9,
-                    GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                    new Insets(15, 15, 15, 15), 0, 0));
-            frame.setVisible(true);
-            frame.pack();
-        }
-        private void selectNameInAddMoney(){
-
-        }
-    }
-
 }

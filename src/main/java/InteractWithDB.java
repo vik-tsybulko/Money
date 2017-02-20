@@ -50,7 +50,7 @@ public class InteractWithDB {
                     + "ID INTEGER NOT NULL PRIMARY KEY, "
                     + "USERNAME TEXT NOT NULL";
             for (int i = 1; i <= qDay; i++){
-                queryCreateTable += ", DAY" + i + " INTEGER NOT NULL DEFAULT 0";
+                queryCreateTable += ", Day" + i + " INTEGER NOT NULL DEFAULT 0";
             }
             queryCreateTable += ")";
             statement.execute(queryCreateTable);
@@ -63,6 +63,35 @@ public class InteractWithDB {
                         + ")";
                 statement.execute(insertUserTableSQL);
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void addMoney(String nameParty, String day, String[] isSelectedMan, String payer, int sumOther, int sumPayer){
+        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+        connectionJDBC.init(nameParty);
+        Connection connection = connectionJDBC.getConnection();
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+            String queryAddMoneyOther;
+            String queryAddMoneyPayer;
+            System.out.println(isSelectedMan.length);
+            for (String s : isSelectedMan){
+                if (s.equals(payer)){
+                    queryAddMoneyPayer = "UPDATE USER SET "
+                            + day + "=" + "+" + sumPayer
+                            + " WHERE USERNAME =" + "'" + s + "'";
+                    statement.execute(queryAddMoneyPayer);
+                }else {
+                    queryAddMoneyOther = "UPDATE USER SET "
+                            + day + "=" + "-" + sumOther
+                            + " WHERE USERNAME =" + "'" + s + "'";
+                    statement.execute(queryAddMoneyOther);
+                }
+            }
+            PartyInfo.getFrame().repaint();
 
         } catch (SQLException e) {
             e.printStackTrace();

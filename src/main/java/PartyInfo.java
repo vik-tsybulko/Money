@@ -13,35 +13,34 @@ public class PartyInfo {
     PartyInfo(){
 
     }
-    private JFrame frame;
-    private JScrollPane scrollPane;
-    private JTable table;
+    private static JFrame frame = new JFrame("Party Info");
     private JPanel buttonPanel;
     private JButton addMoneyButton;
     private JButton cancelButton;
-    private String nameParty;
+    private static String nameParty;
+    public static String getNameParty() {
+        return nameParty;
+    }
+    public static JFrame getFrame() {
+        return frame;
+    }
 
     public void start(){
-        frame = new JFrame("Party Info");
         frame.setLayout(new BorderLayout());
-        frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setBounds(50, 50, 250, 300);
 
-
         nameParty = FirsPage.getInstance().getSelectParty();
-        MyTableModel tableModel = new MyTableModel();
-        tableModel.initDB(nameParty);
-
-        table = new JTable(tableModel);
-        scrollPane = new JScrollPane(table);
-        frame.add(scrollPane, BorderLayout.CENTER);
+        TablePanel tablePanel = new TablePanel();
+        tablePanel.start();
+        frame.add(TablePanel.getPanel(), BorderLayout.CENTER);
 
         addMoneyButton = new JButton("Add Money");
         addMoneyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddMoney addMoney = new AddMoney();
-                addMoney.start(nameParty);
+                AddMoney addMoney = new AddMoney(nameParty);
+                addMoney.start();
             }
         });
         cancelButton = new JButton("Cancel");
@@ -61,80 +60,5 @@ public class PartyInfo {
         frame.pack();
     }
 
-    private class MyTableModel extends AbstractTableModel{
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-        int columnCount;
-        int rowCount;
-        ArrayList<String> columnName = new ArrayList<String>();
-        ArrayList<String[]> dataArray = new ArrayList<String[]>();
-        MyTableModel(){
-
-        }
-
-        void initDB(String nameParty){
-            try {
-                ConnectionJDBC conjdbc = new ConnectionJDBC();
-                conjdbc.init(nameParty);
-                connection = conjdbc.getConnection();
-                statement = connection.createStatement();
-                resultSet = statement.executeQuery("SELECT QMAN FROM QUANTITY");
-                rowCount = resultSet.getInt(1);
-
-                resultSet = statement.executeQuery("SELECT * FROM USER");
-                columnCount = resultSet.getMetaData().getColumnCount();
-                while (resultSet.next()){
-                    String[] row = new String[columnCount];
-                    for (int i = 1; i <= columnCount; i++){
-                        row[i - 1] = resultSet.getString(i);
-                    }
-                    dataArray.add(row);
-                }
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }finally {
-                    try {
-                        if (statement != null) {
-                            resultSet.close();
-                            statement.close();
-                            connection.close();
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-            }
-        }
-
-
-
-        @Override
-        public int getRowCount() {
-            return rowCount;
-        }
-
-        @Override
-        public int getColumnCount() {
-            return columnCount;
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
-            String[] rows = dataArray.get(rowIndex);
-            return rows[columnIndex];
-        }
-        @Override
-        public String getColumnName(int columnIndex){
-            columnName.add(0, "ID");
-            columnName.add(1, "Name");
-            for (int i = 1; i <= columnCount; i++){
-                String s = "Day " + i;
-                columnName.add((i + 1), s);
-            }
-            return columnName.get(columnIndex);
-        }
-
-    }
 
 }

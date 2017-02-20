@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
-        <schema name="main" object-types="column, constraint, index, table, dataset trigger, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
@@ -35,6 +31,9 @@
 update USER set DAY2 = 5 where USERNAME = 'TOL';
 select * from USER ;]]></console>
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-list connection-id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab" dataset="main.USER" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -74,7 +73,7 @@ select * from USER ;]]></console>
           <port value="" />
           <database value="" />
           <files>
-            <file path="$PROJECT_DIR$/src/main/resources/KSU.sqlite" schema="main" />
+            <file path="$PROJECT_DIR$/src/main/resources/Ksu.sqlite" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-password value="false" />
