@@ -13,7 +13,7 @@ public class PartyInfo {
     PartyInfo(){
 
     }
-    private static JFrame frame = new JFrame("Party Info");
+    private JFrame frame;
     private JPanel buttonPanel;
     private JButton addMoneyButton;
     private JButton cancelButton;
@@ -21,11 +21,10 @@ public class PartyInfo {
     public static String getNameParty() {
         return nameParty;
     }
-    public static JFrame getFrame() {
-        return frame;
-    }
 
     public void start(){
+        frame = new JFrame("Party Info");
+        frame.getContentPane().removeAll();
         frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setBounds(50, 50, 250, 300);
@@ -59,6 +58,4 @@ public class PartyInfo {
         frame.setVisible(true);
         frame.pack();
     }
-
-
 }

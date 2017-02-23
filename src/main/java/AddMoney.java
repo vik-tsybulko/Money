@@ -115,8 +115,7 @@ public class AddMoney {
             public void actionPerformed(ActionEvent e) {
                 Logic logic = new Logic();
                 logic.addPay();
-                TableModel tableModel = new TableModel();
-                tableModel.initDB(nameParty);
+                TableModel.initDB(nameParty);
                 TablePanel.repaintPanel();
                 frame.setVisible(false);
             }

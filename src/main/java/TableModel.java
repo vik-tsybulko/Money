@@ -9,18 +9,18 @@ import java.util.ArrayList;
  * Created by Solush on 17.02.2017.
  */
 public class TableModel extends AbstractTableModel {
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-        int columnCount;
-        int rowCount;
-        ArrayList<String> columnName = new ArrayList<String>();
-        ArrayList<String[]> dataArray = new ArrayList<String[]>();
+        static private Connection connection = null;
+        static private Statement statement = null;
+        static private ResultSet resultSet = null;
+        static private int columnCount;
+        static private int rowCount;
+        static private ArrayList<String> columnName = new ArrayList<String>();
+        static private ArrayList<String[]> dataArray = new ArrayList<String[]>();
         TableModel(){
 
         }
 
-        void initDB(String nameParty){
+        static void initDB(String nameParty){
             try {
                 dataArray.clear();
                 ConnectionJDBC conjdbc = new ConnectionJDBC();

@@ -34,7 +34,6 @@ public class FirsPage {
         jLabel = new JLabel("Your Party");
         labelBox.add(jLabel);
 
-        //listBox вінесен за пределі метода для доступа к нему в другом методе для перерисовки
         whichOpenStartPage();
         Box listBox = Box.createHorizontalBox();
         jList = new JList(defaultListModel);

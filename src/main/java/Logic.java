@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -8,7 +10,7 @@ public class Logic {
     private String suplier;
     private int amount;
     private String payFor;
-    private String[] isSelectedMan;
+    List<String> isSelectedManArr;
     public Logic(){
 
     }
@@ -18,23 +20,22 @@ public class Logic {
         suplier = String.valueOf(AddMoney.getSuplierComboBox().getSelectedItem());
         amount = Integer.valueOf(AddMoney.getAmountTextField().getText());
         payFor = AddMoney.getPayForTextField().getText();
-        isSelectedMan = new String[SelectPeople.quantityTrue];
-        int quant = 0;
+        isSelectedManArr = new ArrayList<String>();
+
         for (Map.Entry entry : SelectPeople.getIsParticipant().entrySet()){
             if (entry.getValue().equals(true)){
-                isSelectedMan[quant] = String.valueOf(entry.getKey());
-                quant++;
+                isSelectedManArr.add(String.valueOf(entry.getKey()));
             }
         }
         int sumPayer;
         int sumOther;
-        sumOther = amount / isSelectedMan.length;
+        sumOther = amount / isSelectedManArr.size();
         System.out.println(sumOther);
         sumPayer = amount - sumOther;
         System.out.println(sumPayer);
 
         InteractWithDB interactWithDB = new InteractWithDB();
-        interactWithDB.addMoney(PartyInfo.getNameParty(), dayOfPayment, isSelectedMan, suplier, sumOther, sumPayer);
+        interactWithDB.addMoney(PartyInfo.getNameParty(), dayOfPayment, isSelectedManArr, suplier, sumOther, sumPayer);
         /*
         * amount = 100
         * день 1

@@ -28,6 +28,7 @@ public class TablePanel implements Runnable {
 
     }
     public void start(){
+        panel.removeAll();
         tableModel.initDB(nameParty);
         table = new JTable(tableModel);
         scrollPane = new JScrollPane(table);

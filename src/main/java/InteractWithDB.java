@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by viktor on 06.02.17.
@@ -68,7 +70,7 @@ public class InteractWithDB {
             e.printStackTrace();
         }
     }
-    public void addMoney(String nameParty, String day, String[] isSelectedMan, String payer, int sumOther, int sumPayer){
+    public void addMoney(String nameParty, String day, List<String> isSelectedMan, String payer, int sumOther, int sumPayer){
         ConnectionJDBC connectionJDBC = new ConnectionJDBC();
         connectionJDBC.init(nameParty);
         Connection connection = connectionJDBC.getConnection();
@@ -77,7 +79,7 @@ public class InteractWithDB {
             statement = connection.createStatement();
             String queryAddMoneyOther;
             String queryAddMoneyPayer;
-            System.out.println(isSelectedMan.length);
+            System.out.println(isSelectedMan.size());
             for (String s : isSelectedMan){
                 if (s.equals(payer)){
                     queryAddMoneyPayer = "UPDATE USER SET "
@@ -91,7 +93,8 @@ public class InteractWithDB {
                     statement.execute(queryAddMoneyOther);
                 }
             }
-            PartyInfo.getFrame().repaint();
+            //PartyInfo.getFrame().repaint();
+           /**/ TablePanel.getPanel().repaint();
 
         } catch (SQLException e) {
             e.printStackTrace();
