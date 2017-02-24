@@ -1,8 +1,11 @@
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by viktor on 06.02.17.
@@ -70,34 +73,46 @@ public class InteractWithDB {
             e.printStackTrace();
         }
     }
-    public void addMoney(String nameParty, String day, List<String> isSelectedMan, String payer, int sumOther, int sumPayer){
+    public void addMoney(String nameParty, String day, Map<String, Integer> money){
         ConnectionJDBC connectionJDBC = new ConnectionJDBC();
         connectionJDBC.init(nameParty);
         Connection connection = connectionJDBC.getConnection();
         Statement statement = null;
         try {
             statement = connection.createStatement();
-            String queryAddMoneyOther;
-            String queryAddMoneyPayer;
-            System.out.println(isSelectedMan.size());
-            for (String s : isSelectedMan){
-                if (s.equals(payer)){
-                    queryAddMoneyPayer = "UPDATE USER SET "
-                            + day + "=" + "+" + sumPayer
-                            + " WHERE USERNAME =" + "'" + s + "'";
-                    statement.execute(queryAddMoneyPayer);
-                }else {
-                    queryAddMoneyOther = "UPDATE USER SET "
-                            + day + "=" + "-" + sumOther
-                            + " WHERE USERNAME =" + "'" + s + "'";
-                    statement.execute(queryAddMoneyOther);
-                }
+
+            for (Map.Entry entry : money.entrySet()){
+                String query = "UPDATE USER SET "
+                        + day + " = " + Integer.parseInt(entry.getValue().toString())
+                        + " WHERE USERNAME =" + "'" + entry.getKey().toString() + "'";
+                statement.execute(query);
             }
-            //PartyInfo.getFrame().repaint();
-           /**/ TablePanel.getPanel().repaint();
+            TablePanel.getPanel().repaint();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public Map<String, Integer> getMoneyInMan(String nameParty, String day){
+        Map<String, Integer> money = new HashMap<String, Integer>();
+        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+        connectionJDBC.init(nameParty);
+        Connection connection = connectionJDBC.getConnection();
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try {
+            statement = connection.createStatement();
+            String query = "SELECT USERNAME, " + day + " FROM USER";
+            resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()){
+                    money.put(resultSet.getString(1), resultSet.getInt(2));
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return money;
     }
 }

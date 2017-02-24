@@ -23,13 +23,18 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
+        <schema name="main" object-types="column, table, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="588e3300-fed8-4fc9-8b24-ba06ee7c44ab">
       <console name="Connection" type="STANDARD"><![CDATA[update USER set DAY1 = 3 where USERNAME = 'VIK';
 update USER set DAY2 = 5 where USERNAME = 'TOL';
-select * from USER ;]]></console>
+select * from USER ;
+select USERNAME, Day1 from USER;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
