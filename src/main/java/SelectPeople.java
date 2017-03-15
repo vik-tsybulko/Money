@@ -13,10 +13,15 @@ public class SelectPeople {
     private JButton okButton;
     private JButton cancelButton;
     private static HashMap<String, Boolean> isParticipant = new HashMap<String, Boolean>();
+    public static String[] nameMan;
     public static HashMap<String, Boolean> getIsParticipant(){
         return isParticipant;
     }
-    public static int quantityTrue = 0;
+
+    public static String[] getNameMan() {
+        return nameMan;
+    }
+
     public SelectPeople(){
 
     }
@@ -65,10 +70,11 @@ public class SelectPeople {
     }
 
     private void isSelected(){
+        nameMan = new String[AddMoney.getUserCheckBox().length];
         for (int i = 0; i < AddMoney.getUserCheckBox().length; i++){
             isParticipant.put(AddMoney.getUserCheckBox()[i].getText(), AddMoney.getUserCheckBox()[i].isSelected());
             if (AddMoney.getUserCheckBox()[i].isSelected() == true){
-                quantityTrue++;
+                nameMan[i] = AddMoney.getUserCheckBox()[i].getText();
             }
         }
     }

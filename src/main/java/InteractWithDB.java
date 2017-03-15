@@ -115,4 +115,34 @@ public class InteractWithDB {
         }
         return money;
     }
+    public void addPaymentToDB (String nameParty, String suplierName, String[] userName, String day, int summ, String payFor){
+        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+        connectionJDBC.init(nameParty);
+        Connection connection = connectionJDBC.getConnection();
+        Statement statement = null;
+        String nameTable = payFor.replaceAll(" ", "_");
+        System.out.println(nameTable);
+
+        try {
+            statement = connection.createStatement();
+            String query = "CREATE TABLE " + nameTable
+                    + " (suplierName TEXT NOT NULL, "
+                    + "userName TEXT NOT NULL, "
+                    + "day TEXT NOT NULL, "
+                    + "summPayment INTEGER NOT NULL, "
+                    + "payFor VARCHAR(20) NOT NULL)";
+            statement.execute(query);
+            for (String s : userName){
+                query = "INSERT INTO " + nameTable + " VALUES ("
+                        + "'" + suplierName + "', "
+                        + "'" + s + "', "
+                        + "'" + day + "', "
+                        + summ + ", "
+                        + "'" + payFor + "')";
+                statement.execute(query);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

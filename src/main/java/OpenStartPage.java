@@ -24,11 +24,11 @@ public class OpenStartPage {
         }
         listFile = file.listFiles(new MyFileNameFilter(ext));
         if (listFile.length == 0){
-            System.out.println(dir + "не содержит файлов с расширением " + ext);
+            System.out.println(dir + " не содержит файлов с расширением " + ext);
         }
         else {
             for (File f : listFile){
-                System.out.println("Файл: " + dir  + f.getName());
+                System.out.println("Файл: " + dir + f.getName());
             }
             result = true;
         }
