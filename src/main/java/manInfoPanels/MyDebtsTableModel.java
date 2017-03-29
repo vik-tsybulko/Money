@@ -15,7 +15,7 @@ public class MyDebtsTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 3;
+        return 4;
     }
 
     @Override
@@ -24,9 +24,10 @@ public class MyDebtsTableModel extends AbstractTableModel {
     }
     @Override
     public String getColumnName(int columnIndex){
-        columnName.add(0, "ID");
-        columnName.add(1, "Name");
-        columnName.add(2, "Phone");
+        columnName.add(0, "Name");
+        columnName.add(1, "Summ");
+        columnName.add(2, "Pay for");
+        columnName.add(3, "Day");
         return columnName.get(columnIndex);
     }
 }

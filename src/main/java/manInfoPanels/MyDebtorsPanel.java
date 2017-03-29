@@ -23,7 +23,7 @@ public class MyDebtorsPanel extends JPanel {
         labelBox.add(myDebtorstLabel);
         labelBox.add(Box.createHorizontalGlue());
 
-        MyPaymentTableModel tableModel = new MyPaymentTableModel();
+        MyDebtorsTableModel tableModel = new MyDebtorsTableModel();
         myDebtorsTable = new JTable(tableModel);
         myDebtorsTable.setColumnSelectionAllowed(true);
         myDebtorsTable.getTableHeader().setReorderingAllowed(false);

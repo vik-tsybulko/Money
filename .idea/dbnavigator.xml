@@ -24,14 +24,17 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="bbc187a3-d2b7-412e-b2af-4f4de85ea2d2">
+      <connection connection-id="6ad5bc1d-2f4c-4843-9e45-9508b02e859e">
         <schema name="main" object-types="column, constraint, index, table, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="bbc187a3-d2b7-412e-b2af-4f4de85ea2d2">
-      <console name="Connection" type="STANDARD"><![CDATA[select * from piva_s]]></console>
+    <connection id="6ad5bc1d-2f4c-4843-9e45-9508b02e859e">
+      <console name="Connection" type="STANDARD"><![CDATA[select * from sidr
+select * from vodka
+select * from vino
+select name from sqlite_master where type = 'table']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
@@ -57,7 +60,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="bbc187a3-d2b7-412e-b2af-4f4de85ea2d2" active="true">
+      <connection id="6ad5bc1d-2f4c-4843-9e45-9508b02e859e" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -72,7 +75,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="D:\Work and Teach\Money\src\main\resources\TEC.sqlite" schema="main" />
+            <file path="D:\Work and Teach\Money\src\main\resources\partu.sqlite" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-password value="false" />
@@ -96,7 +99,7 @@
           <charset value="UTF-8" />
           <ddl-file-binding value="true" />
           <database-logging value="false" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <environment-type value="default" />
           <idle-time-to-disconnect value="30" />
