@@ -34,7 +34,9 @@
       <console name="Connection" type="STANDARD"><![CDATA[select * from sidr
 select * from vodka
 select * from vino
-select name from sqlite_master where type = 'table']]></console>
+select name from sqlite_master where type = 'table'
+select Day1 from user where username='Name 3'
+select * from Name_1]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
@@ -75,7 +77,7 @@ select name from sqlite_master where type = 'table']]></console>
           <port value="" />
           <database value="" />
           <files>
-            <file path="D:\Work and Teach\Money\src\main\resources\partu.sqlite" schema="main" />
+            <file path="D:\Work and Teach\Money\src\main\resources\jk.sqlite" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-password value="false" />

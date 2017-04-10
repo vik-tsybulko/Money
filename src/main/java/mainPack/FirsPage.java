@@ -21,7 +21,6 @@ public class FirsPage {
         return instance;
     }
     private FirsPage(){
-
     }
     private JFrame jFrame = new JFrame("Money");
     private JLabel jLabel;

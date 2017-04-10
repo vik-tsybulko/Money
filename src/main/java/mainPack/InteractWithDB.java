@@ -51,14 +51,14 @@ public class InteractWithDB {
         Statement statement = null;
         try {
             statement = connection.createStatement();
-            String queryCreateTable = "CREATE TABLE USER("
+            String queryCreateTableUsers = "CREATE TABLE USER("
                     + "ID INTEGER NOT NULL PRIMARY KEY, "
                     + "USERNAME TEXT NOT NULL";
             for (int i = 1; i <= qDay; i++){
-                queryCreateTable += ", Day" + i + " INTEGER NOT NULL DEFAULT 0";
+                queryCreateTableUsers += ", Day" + i + " INTEGER NOT NULL DEFAULT 0";
             }
-            queryCreateTable += ")";
-            statement.execute(queryCreateTable);
+            queryCreateTableUsers += ")";
+            statement.execute(queryCreateTableUsers);
 
             for (int i = 0; i < nameMan.length; i++){
                 String s = nameMan[i];
@@ -68,6 +68,28 @@ public class InteractWithDB {
                         + ")";
                 statement.execute(insertUserTableSQL);
             }
+            for (int i = 0; i < nameMan.length; i++) {
+                String nameTable = nameMan[i].replaceAll(" ", "_");
+                String queryCreateTableUser = "CREATE TABLE " + nameTable
+                        + "(Name TEXT NOT NULL PRIMARY KEY";
+                for (int j = 1; j <= qDay; j++) {
+                    queryCreateTableUser += ", Day" + j + " INTEGER NOT NULL DEFAULT 0";
+                }
+                queryCreateTableUser += ")";
+                statement.execute(queryCreateTableUser);
+                for (int j = 0; j < nameMan.length;) {
+                    if (nameMan[j] == nameMan[i]){
+                        j++;
+                        continue;
+                    }
+                    String insertName = "INSERT INTO " + nameTable
+                            + "(Name) VALUES ('" + nameMan[j] + "')";
+                    statement.execute(insertName);
+                    j++;
+                }
+
+            }
+
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -84,22 +106,18 @@ public class InteractWithDB {
 
         }
     }
-    public void addMoney(String nameParty, String day, Map<String, Integer> money){
+    public void addMoney(String nameParty, String day, String nameMan, int newMoney) {
         ConnectionJDBC connectionJDBC = new ConnectionJDBC();
         connectionJDBC.init(nameParty);
         Connection connection = connectionJDBC.getConnection();
         Statement statement = null;
         try {
             statement = connection.createStatement();
-
-            for (Map.Entry entry : money.entrySet()){
-                String query = "UPDATE USER SET "
-                        + day + " = " + Integer.parseInt(entry.getValue().toString())
-                        + " WHERE USERNAME =" + "'" + entry.getKey().toString() + "'";
-                statement.execute(query);
-            }
+            String query = "UPDATE USER SET "
+                    + day + "=" + newMoney
+                    + " WHERE USERNAME =" + "'" + nameMan + "'";
+            statement.execute(query);
             TablePanel.getPanel().repaint();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -110,10 +128,40 @@ public class InteractWithDB {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-
             }
-
         }
+
+//    public void addMoney(String nameParty, String day, Map<String, Integer> money){
+//        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+//        connectionJDBC.init(nameParty);
+//        Connection connection = connectionJDBC.getConnection();
+//        Statement statement = null;
+//        try {
+//            statement = connection.createStatement();
+//
+//            for (Map.Entry entry : money.entrySet()){
+//                String query = "UPDATE USER SET "
+//                        + day + " = " + Integer.parseInt(entry.getValue().toString())
+//                        + " WHERE USERNAME =" + "'" + entry.getKey().toString() + "'";
+//                statement.execute(query);
+//            }
+//            TablePanel.getPanel().repaint();
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }finally {
+//            if (statement != null){
+//                try {
+//                    statement.close();
+//                    connection.close();
+//                } catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//
+//        }
+//    }
     }
     public Map<String, Integer> getMoneyInMan(String nameParty, String day){
         Map<String, Integer> money = new HashMap<String, Integer>();
@@ -146,6 +194,31 @@ public class InteractWithDB {
             }
 
         }
+        return money;
+    }
+    public int getMoney(String nameParty, String day, String nameMan){
+        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+        connectionJDBC.init(nameParty);
+        Connection connection = connectionJDBC.getConnection();
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int money = 0;
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("SELECT " + day + " FROM USER WHERE USERNAME = '" + nameMan + "'");
+            money = resultSet.getInt(1);
+        } catch (SQLException e) {
+
+        }finally {
+        if (statement != null){
+            try {
+                statement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
         return money;
     }
     public void addPaymentToDB (String nameParty, String suplierName, String[] userName, String day, int summ, String payFor){
@@ -247,5 +320,8 @@ public int payCount = 0;
             break;
         }
         return data;
+    }
+    public void getDataPayments(){
+
     }
 }
