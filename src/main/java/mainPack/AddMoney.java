@@ -8,8 +8,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by Solush on 08.02.2017.
@@ -116,12 +114,14 @@ public class AddMoney {
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                InteractWithDB interactWithDB = new InteractWithDB();
+                interactWithDB.addPayForToTableInDB(nameParty, String.valueOf(suplierComboBox.getSelectedItem()), payForTextField.getText());
                 Logic logic = new Logic();
                 logic.addPay();
                 TableModel.initDB(nameParty);
                 TablePanel.repaintPanel();
                 frame.setVisible(false);
-                InteractWithDB interactWithDB = new InteractWithDB();
+
                 interactWithDB.addPaymentToDB(nameParty, String.valueOf(suplierComboBox.getSelectedItem()), SelectPeople.getNameMan(), String.valueOf(dayComboBox.getSelectedItem()), Integer.valueOf(amountTextField.getText()), payForTextField.getText());
             }
         });
