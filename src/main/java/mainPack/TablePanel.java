@@ -37,8 +37,8 @@ public class TablePanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2){
-                    ManInfo manInfo = new ManInfo();
-                    manInfo.start(getNameSelected());
+                    ManInfo manInfo = new ManInfo(getNameSelected());
+                    manInfo.start();
                 }
             }
 

@@ -122,7 +122,6 @@ public class AddMoney {
                 TablePanel.repaintPanel();
                 frame.setVisible(false);
 
-                interactWithDB.addPaymentToDB(nameParty, String.valueOf(suplierComboBox.getSelectedItem()), SelectPeople.getNameMan(), String.valueOf(dayComboBox.getSelectedItem()), Integer.valueOf(amountTextField.getText()), payForTextField.getText());
             }
         });
         cancelButton = new JButton("Cancel");

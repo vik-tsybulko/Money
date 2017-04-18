@@ -34,19 +34,22 @@ public class Logic {
             if (AddMoney.getUserCheckBox()[i].isSelected() == true) {
                 if (AddMoney.getUserCheckBox()[i].getText() == suplier) {
                     int spentMoney = amount - pay;
-                    int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment, AddMoney.getUserCheckBox()[i].getText());
+                    int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment,
+                            AddMoney.getUserCheckBox()[i].getText());
                     int newMoney = oldMoney + spentMoney;
                     interactWithDB.addMoneyToCommonDB(PartyInfo.getNameParty(), dayOfPayment,
                             AddMoney.getUserCheckBox()[i].getText(), newMoney, suplier, pay, payFor, amount);
                 } else {
                     int spentMoney = -pay;
-                    int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment, AddMoney.getUserCheckBox()[i].getText());
+                    int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment,
+                            AddMoney.getUserCheckBox()[i].getText());
                     int newMoney = oldMoney + spentMoney;
                     interactWithDB.addMoneyToCommonDB(PartyInfo.getNameParty(), dayOfPayment,
                             AddMoney.getUserCheckBox()[i].getText(), newMoney, suplier, pay, payFor, amount);
                 }
             }else if (AddMoney.getUserCheckBox()[i].getText() == suplier) {
-                int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment, AddMoney.getUserCheckBox()[i].getText());
+                int oldMoney = interactWithDB.getMoney(PartyInfo.getNameParty(), dayOfPayment,
+                        AddMoney.getUserCheckBox()[i].getText());
                 int newMoney = oldMoney + amount;
                 interactWithDB.addMoneyToCommonDB(PartyInfo.getNameParty(), dayOfPayment,
                         AddMoney.getUserCheckBox()[i].getText(), newMoney, suplier, pay, payFor, amount);

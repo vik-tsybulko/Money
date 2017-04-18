@@ -13,13 +13,10 @@ public class MyPaymentPanel extends JPanel {
     private Box labelBox = Box.createHorizontalBox();
     private Box tableBox = Box.createHorizontalBox();
     private Box mainBox = Box.createVerticalBox();
-    String[] strings = new String[3];
-    private JComboBox comboBox = new JComboBox(strings);
+    String nameSelected;
 
-    public MyPaymentPanel(){
-        strings[0] = "vasa";
-        strings[1] = "pasa";
-        strings[2] = "praha";
+    public MyPaymentPanel(String name){
+        nameSelected = name;
     }
 
     public void start() {
@@ -28,7 +25,7 @@ public class MyPaymentPanel extends JPanel {
         labelBox.add(myPaymentLabel);
         labelBox.add(Box.createHorizontalGlue());
 
-        MyPaymentTableModel tableModel = new MyPaymentTableModel();
+        MyPaymentTableModel tableModel = new MyPaymentTableModel(nameSelected);
         myPaymentTable = new JTable(tableModel);
 
         myPaymentTable.getTableHeader().setReorderingAllowed(false);

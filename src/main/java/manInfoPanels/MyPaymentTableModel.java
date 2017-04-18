@@ -17,16 +17,15 @@ public class MyPaymentTableModel extends AbstractTableModel {
     ArrayList<String> columnName = new ArrayList<String>();
     List<String[]> data = new ArrayList<String[]>();
     InteractWithDB interactWithDB = new InteractWithDB();
+    String name;
 
-
-
-
-    MyPaymentTableModel(){
-        data = interactWithDB.getData(PartyInfo.getNameParty());
+    MyPaymentTableModel(String name){
+        this.name = name;
+        data = interactWithDB.getDataForMyPayment(PartyInfo.getNameParty(), name);
     }
     @Override
     public int getRowCount() {
-        return interactWithDB.payCount;
+        return data.size();
     }
 
     @Override
@@ -36,26 +35,15 @@ public class MyPaymentTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        String[] rows = data.get(rowIndex);
-        switch (columnIndex) {
-            case 0:
-                return rows[2];
-            case 1:
-                return rows[4];
-            case 2:
-                return rows[3];
-            case 3:
-                return rows[1];
-        }
-        return rows[columnIndex];
+        String[] row = data.get(rowIndex);
+        return row[columnIndex];
     }
     @Override
     public String getColumnName(int columnIndex){
         columnName.add(0, "Day");
         columnName.add(1, "Pay for");
         columnName.add(2, "Summ");
-        columnName.add(3, "Suplier");
-        columnName.add(4, "Name");
+        columnName.add(3, "Participants");
         return columnName.get(columnIndex);
     }
 }
