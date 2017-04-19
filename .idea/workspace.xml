@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9286e28f-8fd4-4e72-879b-c9d76c9f47f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/AddMoney$2.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/AddMoney$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/AddMoney$3.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/AddMoney$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/AddMoney.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/AddMoney.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/InteractWithDB.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/InteractWithDB.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/Logic.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/Logic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/ManInfo.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/ManInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/TablePanel$1.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/TablePanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/manInfoPanels/MyPaymentPanel.class" afterPath="$PROJECT_DIR$/target/classes/manInfoPanels/MyPaymentPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/manInfoPanels/MyPaymentTableModel.class" afterPath="$PROJECT_DIR$/target/classes/manInfoPanels/MyPaymentTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/TableModel.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/TableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mainPack/TablePanel.class" afterPath="$PROJECT_DIR$/target/classes/mainPack/TablePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/manInfoPanels/MyDebtsPanel.class" afterPath="$PROJECT_DIR$/target/classes/manInfoPanels/MyDebtsPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/manInfoPanels/MyDebtsTableModel.class" afterPath="$PROJECT_DIR$/target/classes/manInfoPanels/MyDebtsTableModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OwesMoney.iml" afterPath="$PROJECT_DIR$/OwesMoney.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/Logic.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/Logic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/TableModel.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/TableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java" afterPath="$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java" afterPath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsPanel.java" afterPath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,6 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Money$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1492525020264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OwesMoney$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1486379004967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -45,128 +45,32 @@
       <file leaf-file-name="Logic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/Logic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+            <state relative-caret-position="714">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddMoney.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#422#423#0" expanded="false" />
-                <element signature="e#456#457#0" expanded="false" />
-                <element signature="e#508#509#0" expanded="false" />
-                <element signature="e#546#547#0" expanded="false" />
-                <element signature="e#599#600#0" expanded="false" />
-                <element signature="e#637#638#0" expanded="false" />
-                <element signature="e#690#691#0" expanded="false" />
-                <element signature="e#728#729#0" expanded="false" />
-                <element signature="e#1357#1358#0" expanded="false" />
-                <element signature="e#1392#1393#0" expanded="false" />
-                <element signature="e#5233#5234#0" expanded="false" />
-                <element signature="e#5288#5289#0" expanded="false" />
-                <marker date="1492187356018" expanded="true" signature="6091:6116" ph=" SELECT statement (QUANTITY)" />
-                <marker date="1492187356018" expanded="true" signature="6392:6417" ph=" SELECT statement (QUANTITY)" />
-                <marker date="1492187356018" expanded="true" signature="6520:6545" ph=" SELECT statement" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InteractWithDB.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-              <folding>
-                <marker date="1492503808424" expanded="true" signature="605:626" ph=" CREATE statement" />
-                <marker date="1492503808424" expanded="true" signature="803:884" ph=" INSERT statement (QUANTITY)" />
-                <marker date="1492503808424" expanded="true" signature="1792:1809" ph=" CREATE statement" />
-                <marker date="1492503808424" expanded="true" signature="2353:2369" ph=" INSERT statement" />
-                <marker date="1492503808424" expanded="true" signature="2810:2823" ph=" CREATE statement" />
-                <marker date="1492503808424" expanded="true" signature="4316:4439" ph=" UPDATE statement" />
-                <marker date="1492503808424" expanded="true" signature="5340:5390" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5340:5391" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5340:5433" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5340:5434" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5340:5435" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5340:5454" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5491:5543" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5491:5584" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5491:5587" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5491:5588" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5491:5607" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="5713:5807" ph=" SELECT statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6006:6120" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6006:6121" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6006:6140" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6360" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6416" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6417" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6418" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6434" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6451" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6353:6470" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="6745:6862" ph=" UPDATE statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="7390:7397" ph=" SELECT statement" />
-                <marker date="1492503808424" expanded="true" signature="7390:7437" ph=" SELECT statement" />
-                <marker date="1492503808424" expanded="true" signature="7390:7453" ph=" SELECT statement" />
-                <marker date="1492503808424" expanded="true" signature="8401:8414" ph=" CREATE statement" />
-                <marker date="1492503808424" expanded="true" signature="8828:9088" ph=" INSERT statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="9997:10040" ph=" SELECT statement" />
-                <marker date="1492503808424" expanded="true" signature="9997:10041" ph=" SELECT statement (MISSINGVALUE)" />
-                <marker date="1492503808424" expanded="true" signature="11255:11338" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-                <marker date="1492503808424" expanded="true" signature="11255:11339" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-                <marker date="1492503808424" expanded="true" signature="11255:11346" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-                <marker date="1492503808424" expanded="true" signature="11255:11382" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-                <marker date="1492503808424" expanded="true" signature="11255:11383" ph=" INSERT statement (MISSINGVALUE)" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection 1" pinned="false" current-in-tab="false">
-        <entry file="db://69becf07-ebdf-4888-9b14-542dce020d5b/console#Connection 1">
-          <provider selected="true" editor-type-id="0.CONSOLE">
-            <state line="7" column="0" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" current-schema="" />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MyPaymentTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#696#697#0" expanded="false" />
-                <element signature="e#730#731#0" expanded="false" />
-                <element signature="e#779#780#0" expanded="false" />
-                <element signature="e#803#804#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TableModel.java">
+      <file leaf-file-name="MyDebtsTableModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2055#2056#0" expanded="false" />
-                <element signature="e#2094#2095#0" expanded="false" />
-                <element signature="e#2151#2152#0" expanded="false" />
-                <element signature="e#2193#2194#0" expanded="false" />
-                <marker date="1489668269438" expanded="true" signature="1096:1121" ph=" SELECT statement (QUANTITY)" />
-                <marker date="1489668269438" expanded="true" signature="1226:1244" ph=" SELECT statement" />
+                <element signature="e#384#394#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,41 +80,75 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+              <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InteractWithDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="278" column="17" lean-forward="true" selection-start-line="278" selection-start-column="17" selection-end-line="278" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#8428#8438#0" expanded="true" />
+                <element signature="e#9860#9868#0" expanded="true" />
+                <element signature="e#9915#9925#0" expanded="true" />
+                <marker date="1492602739470" expanded="true" signature="660:681" ph=" CREATE statement" />
+                <marker date="1492602739470" expanded="true" signature="858:939" ph=" INSERT statement (QUANTITY)" />
+                <marker date="1492602739470" expanded="true" signature="1898:1915" ph=" CREATE statement" />
+                <marker date="1492602739470" expanded="true" signature="2403:2419" ph=" INSERT statement" />
+                <marker date="1492602739470" expanded="true" signature="2561:2574" ph=" CREATE statement" />
+                <marker date="1492602739470" expanded="true" signature="4298:4369" ph=" SELECT statement" />
+                <marker date="1492602739470" expanded="true" signature="4473:4535" ph=" UPDATE statement" />
+                <marker date="1492602739470" expanded="true" signature="4836:4890" ph=" UPDATE statement" />
+                <marker date="1492602739470" expanded="true" signature="4919:4990" ph=" SELECT statement" />
+                <marker date="1492602739470" expanded="true" signature="6301:6351" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6301:6352" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6301:6394" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6301:6395" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6301:6396" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6301:6415" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6452:6504" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6452:6545" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6452:6548" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6452:6549" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6452:6568" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6605:6660" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6605:6719" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6605:6738" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="6844:6938" ph=" SELECT statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7090:7204" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7090:7205" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7090:7224" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7431" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7487" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7488" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7489" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7505" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7522" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7424:7541" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="7816:7933" ph=" UPDATE statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="8558:8601" ph=" SELECT statement" />
+                <marker date="1492602739470" expanded="true" signature="8558:8602" ph=" SELECT statement (MISSINGVALUE)" />
+                <marker date="1492602739470" expanded="true" signature="10045:10068" ph=" SELECT statement (SQLITE)" />
+                <marker date="1492602739470" expanded="true" signature="10045:10096" ph=" SELECT statement (SQLITE_MASTER)" />
+                <marker date="1492602739470" expanded="true" signature="10577:10705" ph=" SELECT statement (?)" />
+                <marker date="1492602739470" expanded="true" signature="12358:12441" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+                <marker date="1492602739470" expanded="true" signature="12358:12442" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+                <marker date="1492602739470" expanded="true" signature="12358:12449" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+                <marker date="1492602739470" expanded="true" signature="12358:12485" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+                <marker date="1492602739470" expanded="true" signature="12358:12486" ph=" INSERT statement (MISSINGVALUE)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#262#263#0" expanded="false" />
-                <element signature="e#297#298#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TablePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#425#426#0" expanded="false" />
-                <element signature="e#456#457#0" expanded="false" />
-                <element signature="e#495#496#0" expanded="false" />
-                <element signature="e#523#524#0" expanded="false" />
-              </folding>
-            </state>
+      <file leaf-file-name="Connection 1" pinned="false" current-in-tab="false">
+        <entry file="db://69becf07-ebdf-4888-9b14-542dce020d5b/console#Connection 1">
+          <provider selected="true" editor-type-id="0.CONSOLE">
+            <state line="10" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-5.862069" current-schema="main" />
           </provider>
         </entry>
       </file>
@@ -250,10 +188,7 @@
         <option value="$PROJECT_DIR$/src/main/java/partyInfo/TablePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDetorsPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/ManInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/TablePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtorsTableModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/FirsPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/InteractWithDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/AddMoney.java" />
@@ -264,24 +199,23 @@
         <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/AAA.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainPack/FirsPage.java" />
         <option value="$PROJECT_DIR$/src/lib/sqlite-jdbc-3.16.1.jar!/org/sqlite/jdbc3/JDBC3Statement.class" />
-        <option value="$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java" />
         <option value="[Connection] CONSOLE - Connection" />
         <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mainPack/Logic.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainPack/TableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtorsTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainPack/Logic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java" />
         <option value="[Connection 1] CONSOLE - Connection 1" />
         <option value="$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -316,16 +250,6 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -341,14 +265,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Money" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Money" />
@@ -396,6 +317,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manInfoPanels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,9 +366,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,6 +383,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/lib" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="false" name="BBB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -490,7 +424,7 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -500,7 +434,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -508,7 +442,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -533,7 +471,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -588,27 +530,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -700,34 +621,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="mainPack.Run" />
@@ -752,7 +645,7 @@
         <item index="0" class="java.lang.String" itemvalue="Application.BBB" />
       </list>
     </recent_temporary>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -762,7 +655,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -770,11 +663,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -809,35 +698,35 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32753405" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33282906" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23039216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31240544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3970588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -853,7 +742,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -870,58 +767,6 @@
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtorsTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/SelectPeople.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#425#426#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-            <element signature="e#495#496#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#297#298#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
@@ -933,89 +778,9 @@
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/PartyInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2094#2095#0" expanded="false" />
-            <element signature="e#2151#2152#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <marker date="1489668269438" expanded="true" signature="1096:1121" ph=" SELECT statement (QUANTITY)" />
-            <marker date="1489668269438" expanded="true" signature="1226:1244" ph=" SELECT statement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#696#697#0" expanded="false" />
-            <element signature="e#730#731#0" expanded="false" />
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/Logic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#422#423#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-            <element signature="e#546#547#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#690#691#0" expanded="false" />
-            <element signature="e#728#729#0" expanded="false" />
-            <element signature="e#1357#1358#0" expanded="false" />
-            <element signature="e#1392#1393#0" expanded="false" />
-            <element signature="e#5233#5234#0" expanded="false" />
-            <element signature="e#5288#5289#0" expanded="false" />
-            <marker date="1492187356018" expanded="true" signature="6091:6116" ph=" SELECT statement (QUANTITY)" />
-            <marker date="1492187356018" expanded="true" signature="6392:6417" ph=" SELECT statement (QUANTITY)" />
-            <marker date="1492187356018" expanded="true" signature="6520:6545" ph=" SELECT statement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
@@ -1033,62 +798,190 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="db://[Connection 1] CONSOLE - Connection 1" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/AddMoney.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#4502#5045#0" expanded="false" />
+            <element signature="e#5044#5045#0" expanded="false" />
+            <marker date="1492187356018" expanded="true" signature="6091:6116" ph=" SELECT statement (QUANTITY)" />
+            <marker date="1492187356018" expanded="true" signature="6392:6417" ph=" SELECT statement (QUANTITY)" />
+            <marker date="1492187356018" expanded="true" signature="6520:6545" ph=" SELECT statement" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/table/AbstractTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="80" column="18" lean-forward="false" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtorsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/PartyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TablePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="71" column="79" lean-forward="false" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/TableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtorsTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/Logic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[Connection 1] CONSOLE - Connection 1" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="1011" column="18" lean-forward="false" selection-start-line="1011" selection-start-column="18" selection-end-line="1011" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/ManInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="27" column="73" lean-forward="false" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+          <folding>
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="db://[Connection 1] CONSOLE - Connection 1">
       <provider selected="true" editor-type-id="0.CONSOLE">
-        <state line="7" column="0" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" current-schema="" />
+        <state line="10" column="0" selection-start="550" selection-end="550" vertical-scroll-proportion="-5.862069" current-schema="main" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainPack/InteractWithDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
+        <state relative-caret-position="310">
+          <caret line="278" column="17" lean-forward="true" selection-start-line="278" selection-start-column="17" selection-end-line="278" selection-end-column="17" />
           <folding>
-            <marker date="1492503808424" expanded="true" signature="605:626" ph=" CREATE statement" />
-            <marker date="1492503808424" expanded="true" signature="803:884" ph=" INSERT statement (QUANTITY)" />
-            <marker date="1492503808424" expanded="true" signature="1792:1809" ph=" CREATE statement" />
-            <marker date="1492503808424" expanded="true" signature="2353:2369" ph=" INSERT statement" />
-            <marker date="1492503808424" expanded="true" signature="2810:2823" ph=" CREATE statement" />
-            <marker date="1492503808424" expanded="true" signature="4316:4439" ph=" UPDATE statement" />
-            <marker date="1492503808424" expanded="true" signature="5340:5390" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5340:5391" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5340:5433" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5340:5434" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5340:5435" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5340:5454" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5491:5543" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5491:5584" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5491:5587" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5491:5588" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5491:5607" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="5713:5807" ph=" SELECT statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6006:6120" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6006:6121" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6006:6140" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6360" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6416" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6417" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6418" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6434" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6451" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6353:6470" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="6745:6862" ph=" UPDATE statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="7390:7397" ph=" SELECT statement" />
-            <marker date="1492503808424" expanded="true" signature="7390:7437" ph=" SELECT statement" />
-            <marker date="1492503808424" expanded="true" signature="7390:7453" ph=" SELECT statement" />
-            <marker date="1492503808424" expanded="true" signature="8401:8414" ph=" CREATE statement" />
-            <marker date="1492503808424" expanded="true" signature="8828:9088" ph=" INSERT statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="9997:10040" ph=" SELECT statement" />
-            <marker date="1492503808424" expanded="true" signature="9997:10041" ph=" SELECT statement (MISSINGVALUE)" />
-            <marker date="1492503808424" expanded="true" signature="11255:11338" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-            <marker date="1492503808424" expanded="true" signature="11255:11339" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-            <marker date="1492503808424" expanded="true" signature="11255:11346" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-            <marker date="1492503808424" expanded="true" signature="11255:11382" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
-            <marker date="1492503808424" expanded="true" signature="11255:11383" ph=" INSERT statement (MISSINGVALUE)" />
+            <element signature="e#8428#8438#0" expanded="true" />
+            <element signature="e#9860#9868#0" expanded="true" />
+            <element signature="e#9915#9925#0" expanded="true" />
+            <marker date="1492602739470" expanded="true" signature="660:681" ph=" CREATE statement" />
+            <marker date="1492602739470" expanded="true" signature="858:939" ph=" INSERT statement (QUANTITY)" />
+            <marker date="1492602739470" expanded="true" signature="1898:1915" ph=" CREATE statement" />
+            <marker date="1492602739470" expanded="true" signature="2403:2419" ph=" INSERT statement" />
+            <marker date="1492602739470" expanded="true" signature="2561:2574" ph=" CREATE statement" />
+            <marker date="1492602739470" expanded="true" signature="4298:4369" ph=" SELECT statement" />
+            <marker date="1492602739470" expanded="true" signature="4473:4535" ph=" UPDATE statement" />
+            <marker date="1492602739470" expanded="true" signature="4836:4890" ph=" UPDATE statement" />
+            <marker date="1492602739470" expanded="true" signature="4919:4990" ph=" SELECT statement" />
+            <marker date="1492602739470" expanded="true" signature="6301:6351" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6301:6352" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6301:6394" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6301:6395" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6301:6396" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6301:6415" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6452:6504" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6452:6545" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6452:6548" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6452:6549" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6452:6568" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6605:6660" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6605:6719" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6605:6738" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="6844:6938" ph=" SELECT statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7090:7204" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7090:7205" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7090:7224" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7431" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7487" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7488" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7489" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7505" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7522" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7424:7541" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="7816:7933" ph=" UPDATE statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="8558:8601" ph=" SELECT statement" />
+            <marker date="1492602739470" expanded="true" signature="8558:8602" ph=" SELECT statement (MISSINGVALUE)" />
+            <marker date="1492602739470" expanded="true" signature="10045:10068" ph=" SELECT statement (SQLITE)" />
+            <marker date="1492602739470" expanded="true" signature="10045:10096" ph=" SELECT statement (SQLITE_MASTER)" />
+            <marker date="1492602739470" expanded="true" signature="10577:10705" ph=" SELECT statement (?)" />
+            <marker date="1492602739470" expanded="true" signature="12358:12441" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+            <marker date="1492602739470" expanded="true" signature="12358:12442" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+            <marker date="1492602739470" expanded="true" signature="12358:12449" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+            <marker date="1492602739470" expanded="true" signature="12358:12485" ph=" INSERT statement (MISSINGVALUEPAYFOR)" />
+            <marker date="1492602739470" expanded="true" signature="12358:12486" ph=" INSERT statement (MISSINGVALUE)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyPaymentTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manInfoPanels/MyDebtsTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#384#394#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
           </folding>
         </state>
       </provider>

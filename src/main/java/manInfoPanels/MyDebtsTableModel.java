@@ -1,16 +1,25 @@
 package manInfoPanels;
 
+import mainPack.InteractWithDB;
+import mainPack.PartyInfo;
+
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Solush on 14.03.2017.
  */
 public class MyDebtsTableModel extends AbstractTableModel {
     ArrayList<String> columnName = new ArrayList<String>();
+    List<String[]> data = new ArrayList<String[]>();
+    MyDebtsTableModel(String name){
+        InteractWithDB interactWithDB = new InteractWithDB();
+        data = interactWithDB.getDataForMyDebts(PartyInfo.getNameParty(), name);
+    }
     @Override
     public int getRowCount() {
-        return 10;
+        return data.size();
     }
 
     @Override
@@ -20,7 +29,8 @@ public class MyDebtsTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return null;
+        String[] row = data.get(rowIndex);
+        return row[columnIndex];
     }
     @Override
     public String getColumnName(int columnIndex){

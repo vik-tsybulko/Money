@@ -33,7 +33,7 @@ public class ManInfo {
         MyPaymentPanel paymentPanel = new MyPaymentPanel(nameSelected);
         paymentPanel.start();
         myPaymentBox.add(paymentPanel);
-        MyDebtsPanel debtsPanel = new MyDebtsPanel();
+        MyDebtsPanel debtsPanel = new MyDebtsPanel(nameSelected);
         debtsPanel.start();
         myDebtsBox.add(debtsPanel);
         MyDebtorsPanel debtorsPanel = new MyDebtorsPanel();

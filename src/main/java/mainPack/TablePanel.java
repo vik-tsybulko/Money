@@ -69,7 +69,7 @@ public class TablePanel {
 
     }
     private String getNameSelected(){
-        String name = String.valueOf(table.getValueAt(table.getSelectedRow(), 1));
+        String name = String.valueOf(table.getValueAt(table.getSelectedRow(), 0));
         return name;
     }
 }

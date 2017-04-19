@@ -25,10 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="69becf07-ebdf-4888-9b14-542dce020d5b">
-        <schema name="main" object-types="column, table, view" />
-      </connection>
-      <connection connection-id="e818bdf0-519d-4248-a16c-86ecb8116702">
-        <schema name="main" object-types="table, view" />
+        <schema name="main" object-types="column, constraint, index, table, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,7 +38,10 @@ select * from n1
 update n1 set "Participants" = (select "Participants" from n1 where "payFor" = "1111")  "brr" where "payFor" = 1111
 select "Day", "payFor", "Summ", "Participants" from n1
 create table www3 (ppp integer not null primary key, ddd text not null default null)
-insert into www3 (ppp) values (2)]]></console>
+insert into www3 (ppp) values (2)
+select n4 from n1 where n4 !=0 union all select n4 from n2 where n4 !=0 union all select n4 from n3 where n4 !=0
+select name from sqlite_master where type = 'table'
+select * from n1]]></console>
     </connection>
     <connection id="e818bdf0-519d-4248-a16c-86ecb8116702">
       <console name="Connection" type="STANDARD"><![CDATA[select * from n1]]></console>

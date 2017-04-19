@@ -31,7 +31,12 @@ public class TableModel extends AbstractTableModel {
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery("SELECT QMAN FROM QUANTITY");
                 rowCount = resultSet.getInt(1);
-
+                resultSet = statement.executeQuery("SELECT USERNAME FROM USER");
+                columnName.add("Who/Whom");
+                while (resultSet.next()) {
+                    columnName.add(resultSet.getString(1));
+                }
+                columnName.add("Summ");
                 resultSet = statement.executeQuery("SELECT * FROM USER");
                 columnCount = resultSet.getMetaData().getColumnCount();
                 while (resultSet.next()){
@@ -74,12 +79,6 @@ public class TableModel extends AbstractTableModel {
         }
         @Override
         public String getColumnName(int columnIndex){
-            columnName.add(0, "ID");
-            columnName.add(1, "Name");
-            for (int i = 1; i <= columnCount; i++){
-                String s = "Day " + i;
-                columnName.add((i + 1), s);
-            }
             return columnName.get(columnIndex);
         }
 

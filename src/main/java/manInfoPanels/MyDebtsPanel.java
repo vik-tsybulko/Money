@@ -13,8 +13,9 @@ public class MyDebtsPanel extends JPanel {
     private Box labelBox = Box.createHorizontalBox();
     private Box tableBox = Box.createHorizontalBox();
     private Box mainBox = Box.createVerticalBox();
-    public MyDebtsPanel(){
-
+    String selectedName;
+    public MyDebtsPanel(String name){
+        selectedName = name;
     }
 
     public void start() {
@@ -24,7 +25,7 @@ public class MyDebtsPanel extends JPanel {
         labelBox.add(myDebtsLabel);
         labelBox.add(Box.createHorizontalGlue());
 
-        MyDebtsTableModel tableModel = new MyDebtsTableModel();
+        MyDebtsTableModel tableModel = new MyDebtsTableModel(selectedName);
         myDebtsTable = new JTable(tableModel);
         scrollPane = new JScrollPane(myDebtsTable);
         myDebtsTable.setColumnSelectionAllowed(true);
