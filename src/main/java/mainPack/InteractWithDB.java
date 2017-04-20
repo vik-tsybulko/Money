@@ -237,21 +237,37 @@ public class InteractWithDB {
             nameTable.remove("QUANTITY");
             nameTable.remove("USER");
             String query = "";
-            for (int i = 0; i < nameTable.size();) {
-                if (name.equals(nameTable.get(i))) {
-                    i++;
-                    continue;
-                }
-                if (i == nameTable.size() - 1) {
-                    query += "SELECT Suplier, " + name + ", payFor, Day "
-                            + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0";
-                    i++;
-                } else {
-                    query += "SELECT Suplier," + name + ", payFor, Day "
-                            + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0 UNION ALL ";
-                    i++;
-                }
 
+            for (int i = 0; i < nameTable.size();) {
+                if (name.equals(nameTable.get(nameTable.size() - 1))) {
+                    if (name.equals(nameTable.get(i))) {
+                        i++;
+                        continue;
+                    }
+                    if (i == nameTable.size() - 2) {
+                        query += "SELECT Suplier, " + name + ", payFor, Day "
+                                + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0";
+                        i++;
+                    } else {
+                        query += "SELECT Suplier," + name + ", payFor, Day "
+                                + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0 UNION ALL ";
+                        i++;
+                    }
+                } else {
+                    if (name.equals(nameTable.get(i))) {
+                        i++;
+                        continue;
+                    }
+                    if (i == nameTable.size() - 1) {
+                        query += "SELECT Suplier, " + name + ", payFor, Day "
+                                + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0";
+                        i++;
+                    } else {
+                        query += "SELECT Suplier," + name + ", payFor, Day "
+                                + "FROM " + nameTable.get(i) + " WHERE " + name + " != 0 UNION ALL ";
+                        i++;
+                    }
+                }
             }
             statement = connection.createStatement();
             resultSet = statement.executeQuery(query);
@@ -263,6 +279,96 @@ public class InteractWithDB {
                     System.out.print(row[i - 1] + " ");
                 }
                 System.out.println("");
+                data.add(row);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            if (statement != null) {
+                try {
+                    resultSet.close();
+                    statement.close();
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return data;
+    }
+    public List<String[]> getDataForMyDebtors(String nameParty, String name){
+        ConnectionJDBC connectionJDBC = new ConnectionJDBC();
+        connectionJDBC.init(nameParty);
+        Connection connection = connectionJDBC.getConnection();
+        Statement statement = null;
+        ResultSet resultSet = null;
+        List<String> nameTable = new ArrayList<String>();
+        List<String[]> data = new ArrayList<String[]>();
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("SELECT name FROM sqlite_master WHERE type = 'table'");
+            while (resultSet.next()) {
+                nameTable.add(resultSet.getString(1));
+            }
+            nameTable.remove("QUANTITY");
+            nameTable.remove("USER");
+            String query = "";
+
+            for (int i = 0; i < nameTable.size();) {
+//
+                if (name.equals(nameTable.get(nameTable.size() - 1))) {
+                    if (name.equals(nameTable.get(i))) {
+                        i++;
+                        continue;
+                    }
+                    if (i == nameTable.size() - 2) {
+                        query += "SELECT '" + nameTable.get(i) + "' AS Participants, " + nameTable.get(i) + ", payFor, Day "
+                                + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0";
+                        i++;
+                    } else {
+                        query += "SELECT '" + nameTable.get(i) + "' AS Participants," + nameTable.get(i) + ", payFor, Day "
+                                + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0 UNION ALL ";
+                        i++;
+                    }
+                } else {
+                    if (name.equals(nameTable.get(i))) {
+                        i++;
+                        continue;
+                    }
+                    if (i == nameTable.size() - 1) {
+                        query += "SELECT '" + nameTable.get(i) + "' AS Participants, " + nameTable.get(i) + ", payFor, Day "
+                                + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0";
+                        i++;
+                    } else {
+                        query += "SELECT '" + nameTable.get(i) + "' AS Participants," + nameTable.get(i) + ", payFor, Day "
+                                + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0 UNION ALL ";
+                        i++;
+                    }
+                }
+//                if (name.equals(nameTable.get(i))) {
+//                    i++;
+//                    continue;
+//                }
+//                if (i == nameTable.size() - 1) {
+//                    query += "SELECT '" + nameTable.get(i) + "' AS Participants, " + nameTable.get(i) + ", payFor, Day "
+//                            + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0";
+//                    i++;
+//                } else {
+//                    query += "SELECT '" + nameTable.get(i) + "' AS Participants," + nameTable.get(i) + ", payFor, Day "
+//                            + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0 UNION ALL ";
+//                    i++;
+//                }
+            }
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(query);
+            System.out.println("MyDebtors");
+            while (resultSet.next()) {
+                String[] row = new String[resultSet.getMetaData().getColumnCount()];
+                for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++) {
+                    row[i - 1] = resultSet.getString(i);
+                    System.out.print(row[i - 1] + " ");
+                }
+                System.out.println(resultSet.isClosed());
                 data.add(row);
             }
 

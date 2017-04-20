@@ -19,25 +19,36 @@ public class MyDebtsTableModel extends AbstractTableModel {
     }
     @Override
     public int getRowCount() {
-        return data.size();
+        if (data.isEmpty()) {
+            return 1;
+        }else return data.size();
     }
 
     @Override
     public int getColumnCount() {
-        return 4;
+        if (data.isEmpty()) {
+            return 1;
+        }else return 4;
+
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        String[] row = data.get(rowIndex);
-        return row[columnIndex];
+        if (!data.isEmpty()) {
+            String[] row = data.get(rowIndex);
+            return row[columnIndex];
+        } else return "";
+
     }
     @Override
     public String getColumnName(int columnIndex){
-        columnName.add(0, "Name");
-        columnName.add(1, "Summ");
-        columnName.add(2, "Pay for");
-        columnName.add(3, "Day");
-        return columnName.get(columnIndex);
+        if (!data.isEmpty()) {
+            columnName.add(0, "Name");
+            columnName.add(1, "Summ");
+            columnName.add(2, "Pay for");
+            columnName.add(3, "Day");
+            return columnName.get(columnIndex);
+        } else return "No Debts";
+
     }
 }

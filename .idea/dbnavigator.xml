@@ -31,8 +31,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="69becf07-ebdf-4888-9b14-542dce020d5b">
-      <console name="Connection 1" type="STANDARD"><![CDATA[pragma table_info  (name1)
-pragma main.table_info (name1)
+      <console name="Connection 1" type="STANDARD"><![CDATA[pragma table_info  (n1)
+select name pragma table_info (n1) where type = "INTEGER"
 select * from name1
 select * from n1
 update n1 set "Participants" = (select "Participants" from n1 where "payFor" = "1111")  "brr" where "payFor" = 1111
@@ -41,7 +41,11 @@ create table www3 (ppp integer not null primary key, ddd text not null default n
 insert into www3 (ppp) values (2)
 select n4 from n1 where n4 !=0 union all select n4 from n2 where n4 !=0 union all select n4 from n3 where n4 !=0
 select name from sqlite_master where type = 'table'
-select * from n1]]></console>
+select "Participants", n2, n3,n4,n5 from n1 where n2 !=0 or n3 !=0 or n4 !=0 or n5 !=0
+select "aaa" AS Participants, n2, "payFor", "Day" from n1 where n2 !=0
+union all select "bbb" AS Participants, n3, "payFor", "Day" from n1 where n3 !=0
+union all select "ccc" AS Participants, n4, "payFor", "Day" from n1 where n4 !=0
+union all select "ddd" Participants, n5, "payFor", "Day" from n1 where n5 !=0]]></console>
     </connection>
     <connection id="e818bdf0-519d-4248-a16c-86ecb8116702">
       <console name="Connection" type="STANDARD"><![CDATA[select * from n1]]></console>

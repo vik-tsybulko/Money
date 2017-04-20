@@ -13,8 +13,9 @@ public class MyDebtorsPanel extends JPanel {
     private Box labelBox = Box.createHorizontalBox();
     private Box tableBox = Box.createHorizontalBox();
     private Box mainBox = Box.createVerticalBox();
-    public MyDebtorsPanel(){
-
+    String name;
+    public MyDebtorsPanel(String name){
+        this.name = name;
     }
 
     public void start() {
@@ -23,7 +24,7 @@ public class MyDebtorsPanel extends JPanel {
         labelBox.add(myDebtorstLabel);
         labelBox.add(Box.createHorizontalGlue());
 
-        MyDebtorsTableModel tableModel = new MyDebtorsTableModel();
+        MyDebtorsTableModel tableModel = new MyDebtorsTableModel(name);
         myDebtorsTable = new JTable(tableModel);
         myDebtorsTable.setColumnSelectionAllowed(true);
         myDebtorsTable.getTableHeader().setReorderingAllowed(false);

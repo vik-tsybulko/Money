@@ -36,7 +36,7 @@ public class ManInfo {
         MyDebtsPanel debtsPanel = new MyDebtsPanel(nameSelected);
         debtsPanel.start();
         myDebtsBox.add(debtsPanel);
-        MyDebtorsPanel debtorsPanel = new MyDebtorsPanel();
+        MyDebtorsPanel debtorsPanel = new MyDebtorsPanel(nameSelected);
         debtorsPanel.start();
         myDebtorsBox.add(debtorsPanel);
 
