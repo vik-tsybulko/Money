@@ -28,6 +28,10 @@ public class FirsPage {
     private JList jList;
     private JButton createButton;
 
+    public JList getjList() {
+        return jList;
+    }
+
     public DefaultListModel defaultListModel = new DefaultListModel();
 
     public void start(){
@@ -41,35 +45,37 @@ public class FirsPage {
         Box listBox = Box.createHorizontalBox();
         jList = new JList(defaultListModel);
         jList.setSelectedIndex(0);
-        jList.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (e.getClickCount() == 2){
-                    PartyInfo partyInfo = new PartyInfo();
-                    partyInfo.start();
+        if (!defaultListModel.contains("No Party")){
+            jList.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    if (e.getClickCount() == 2){
+                        PartyInfo partyInfo = new PartyInfo();
+                        partyInfo.start();
+                    }
                 }
-            }
 
-            @Override
-            public void mousePressed(MouseEvent e) {
+                @Override
+                public void mousePressed(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseReleased(MouseEvent e) {
+                @Override
+                public void mouseReleased(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
+                @Override
+                public void mouseEntered(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseExited(MouseEvent e) {
+                @Override
+                public void mouseExited(MouseEvent e) {
 
-            }
-        });
+                }
+            });
+        }
         scrollPane = new JScrollPane(jList);
         scrollPane.setPreferredSize(new Dimension(100, 200));
         listBox.add(scrollPane);
@@ -101,7 +107,8 @@ public class FirsPage {
     }
     private void whichOpenStartPage(){
         OpenStartPage openStartPage = new OpenStartPage();
-        if (openStartPage.findFiles()){
+        if (openStartPage.
+                findFiles()){
             for (File f : openStartPage.listFile){
                 defaultListModel.addElement(f.getName().replaceAll(".sqlite", ""));
             }

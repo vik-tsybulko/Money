@@ -4,10 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Solush on 08.02.2017.
@@ -98,6 +102,17 @@ public class AddMoney {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));
         amountTextField = new JTextField(4);
+        amountTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                Pattern p = Pattern.compile("\\d");
+                Matcher m = p.matcher(String.valueOf(c));
+                if (!m.matches()) {
+                    e.consume();
+                }
+            }
+        });
         frame.add(amountTextField, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.9,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));
@@ -106,6 +121,17 @@ public class AddMoney {
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));
         payForTextField = new JTextField(15);
+        payForTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                Pattern p = Pattern.compile("\\w");
+                Matcher m = p.matcher(String.valueOf(c));
+                if (!m.matches()) {
+                    e.consume();
+                }
+            }
+        });
         frame.add(payForTextField, new GridBagConstraints(1, 5, 1, 1, 0.0, 0.9,
                 GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(15, 15, 15, 15), 0, 0));

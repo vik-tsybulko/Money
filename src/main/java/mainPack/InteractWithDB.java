@@ -62,7 +62,7 @@ public class InteractWithDB {
             for (String s : nameMan) {
                 statement.executeUpdate("INSERT INTO USER (USERNAME) VALUES ('" + s + "')");
                 String nameTable = s.replaceAll(" ", "_");
-                String queryCreateTableUser = "CREATE TABLE " + nameTable + " (payFor TEXT NOT NULL PRIMARY KEY, ";
+                String queryCreateTableUser = "CREATE TABLE " +  nameTable + " (payFor TEXT NOT NULL PRIMARY KEY, ";
                 for (int j = 0; j < nameMan.length; ) {
                     if (nameMan[j] == s) {
                         j++;
@@ -345,19 +345,6 @@ public class InteractWithDB {
                         i++;
                     }
                 }
-//                if (name.equals(nameTable.get(i))) {
-//                    i++;
-//                    continue;
-//                }
-//                if (i == nameTable.size() - 1) {
-//                    query += "SELECT '" + nameTable.get(i) + "' AS Participants, " + nameTable.get(i) + ", payFor, Day "
-//                            + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0";
-//                    i++;
-//                } else {
-//                    query += "SELECT '" + nameTable.get(i) + "' AS Participants," + nameTable.get(i) + ", payFor, Day "
-//                            + "FROM " + name + " WHERE " + nameTable.get(i) + " != 0 UNION ALL ";
-//                    i++;
-//                }
             }
             statement = connection.createStatement();
             resultSet = statement.executeQuery(query);
